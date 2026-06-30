@@ -33,7 +33,9 @@ export const useTypingEffect = (words: string[], speed = 80, pause = 1800) => {
         };
 
         timeoutRef.current = setTimeout(tick, 120);
-        return () => clearTimeout(timeoutRef.current);
+        return () => {
+            if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        };
     }, [charIndex, deleting, wordIndex, words, speed, pause]);
 
     return displayed;
