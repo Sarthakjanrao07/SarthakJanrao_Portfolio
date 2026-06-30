@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { SectionWrapper } from '../components/ui/SectionWrapper';
 import { AnimatedHeading } from '../components/ui/AnimatedHeading';
 

@@ -215,10 +215,10 @@ export const Contact: React.FC = () => {
                                     borderRadius: '14px',
                                     background: 'rgba(20,20,30,0.7)',
                                     color: 'rgba(255,255,255,0.55)',
-                                    fontSize: '1rem', textDecoration: 'none',
+                                    textDecoration: 'none',
                                     transition: 'all 0.25s',
                                     fontWeight: 600,
-                                    fontSize: '0.8rem' as unknown as string,
+                                    fontSize: '0.8rem',
                                 }}
                                 onMouseOver={e => {
                                     e.currentTarget.style.borderColor = 'var(--gold)';
