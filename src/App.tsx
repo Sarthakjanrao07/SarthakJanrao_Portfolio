@@ -16,7 +16,6 @@ import { ThemeSwitcher } from './components/ui/ThemeSwitcher';
 function App() {
   const [activeSection, setActiveSection] = useState('hero');
   const [isMobile, setIsMobile] = useState(false);
-  const [isHeroVisible, setIsHeroVisible] = useState(true);
 
   // Detect mobile
   useEffect(() => {
@@ -52,22 +51,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isMobile]);
 
-  // IntersectionObserver: track hero visibility for sidebar show/hide (all devices)
-  useEffect(() => {
-    const heroEl = document.getElementById('hero');
-    if (!heroEl) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsHeroVisible(entry.isIntersecting);
-      },
-      { threshold: 0.15 } // hide sidebars when <15% of hero is visible
-    );
-
-    observer.observe(heroEl);
-    return () => observer.disconnect();
-  }, []);
-
 
 
   const handleSectionChange = (id: string) => {
@@ -86,8 +69,8 @@ function App() {
       <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-[999] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
       <Navbar activeSection={activeSection} onSectionChange={handleSectionChange} />
-      <SocialSidebar isHeroVisible={isHeroVisible} isMobile={isMobile} />
-      <CpSidebar isHeroVisible={isHeroVisible} isMobile={isMobile} />
+      <SocialSidebar isVisible={activeSection === 'hero'} isMobile={isMobile} />
+      <CpSidebar isVisible={activeSection === 'hero'} isMobile={isMobile} />
       <ThemeSwitcher />
       <main className={isMobile ? "" : "pt-24"}>
         {isMobile ? (

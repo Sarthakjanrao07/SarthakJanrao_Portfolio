@@ -80,7 +80,7 @@ export const Experience: React.FC = () => {
                                         {exp.duration}
                                     </div>
 
-                                    {/* "More" Toggle */}
+                                    {/* "More/Less" Toggle */}
                                     <div style={{
                                         display: 'flex',
                                         alignItems: 'center',
@@ -89,7 +89,7 @@ export const Experience: React.FC = () => {
                                         fontSize: '0.8rem',
                                         fontWeight: 600,
                                     }}>
-                                        <span>More</span>
+                                        <span>{isExpanded ? 'Less' : 'More'}</span>
                                         <motion.div
                                             animate={{ rotate: isExpanded ? 180 : 0 }}
                                             transition={{ duration: 0.3 }}

@@ -10,13 +10,13 @@ const socials = [
 ];
 
 interface SocialSidebarProps {
-    isHeroVisible: boolean;
+    isVisible: boolean;
     isMobile: boolean;
 }
 
-export const SocialSidebar: React.FC<SocialSidebarProps> = ({ isHeroVisible, isMobile }) => {
+export const SocialSidebar: React.FC<SocialSidebarProps> = ({ isVisible, isMobile }) => {
     // Show only when hero is visible — on both desktop and mobile.
-    const shouldShow = isHeroVisible;
+    const shouldShow = isVisible;
 
     return (
         <AnimatePresence>

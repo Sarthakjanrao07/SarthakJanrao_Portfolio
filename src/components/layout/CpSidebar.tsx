@@ -13,13 +13,13 @@ const cpLinks = [
 ];
 
 interface CpSidebarProps {
-    isHeroVisible: boolean;
+    isVisible: boolean;
     isMobile: boolean;
 }
 
-export const CpSidebar: React.FC<CpSidebarProps> = ({ isHeroVisible, isMobile }) => {
+export const CpSidebar: React.FC<CpSidebarProps> = ({ isVisible, isMobile }) => {
     // Show only when hero is visible — on both desktop and mobile.
-    const shouldShow = isHeroVisible;
+    const shouldShow = isVisible;
 
     return (
         <AnimatePresence>
