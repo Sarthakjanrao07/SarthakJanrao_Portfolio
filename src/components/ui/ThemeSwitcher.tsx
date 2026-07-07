@@ -6,9 +6,26 @@ import { useTheme } from '../../hooks/useTheme';
 export const ThemeSwitcher: React.FC = () => {
     const { toggleTheme } = useTheme();
     const [isHovered, setIsHovered] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    React.useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    // Positioned below the navbar (which extends to approx 74px on desktop and 64px on mobile)
+    const rightOffset = isMobile ? '14px' : '24px';
+    const topPosition = isMobile ? '72px' : '90px';
 
     return (
-        <div style={{ position: 'fixed', right: '20px', top: '120px', zIndex: 300 }}>
+        <div style={{
+            position: 'fixed',
+            right: rightOffset,
+            top: topPosition,
+            zIndex: 300
+        }}>
             <motion.button
                 onClick={toggleTheme}
                 onMouseEnter={() => setIsHovered(true)}

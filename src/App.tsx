@@ -12,10 +12,13 @@ import { Footer } from './components/layout/Footer';
 import { SocialSidebar } from './components/layout/SocialSidebar';
 import { CpSidebar } from './components/layout/CpSidebar';
 import { ThemeSwitcher } from './components/ui/ThemeSwitcher';
+import { ChatbotToggle } from './components/chat/ChatbotToggle';
+import { Chatbot } from './components/chat/Chatbot';
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero');
   const [isMobile, setIsMobile] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   // Detect mobile
   useEffect(() => {
@@ -72,6 +75,8 @@ function App() {
       <SocialSidebar isVisible={activeSection === 'hero'} isMobile={isMobile} />
       <CpSidebar isVisible={activeSection === 'hero'} isMobile={isMobile} />
       <ThemeSwitcher />
+      <ChatbotToggle isOpen={isChatOpen} onClick={() => setIsChatOpen(!isChatOpen)} />
+      <Chatbot isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
       <main className={isMobile ? "" : "pt-24"}>
         {isMobile ? (
           <>

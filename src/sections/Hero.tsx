@@ -195,8 +195,8 @@ export const Hero: React.FC = () => {
                         flex-direction: column-reverse;
                         align-items: center;
                         justify-content: center;
-                        gap: 32px;
-                        padding: 110px 0 70px;
+                        gap: 28px;
+                        padding: 100px 0 60px;
                     }
                     .hero-text {
                         flex: 0 0 auto;
@@ -204,17 +204,67 @@ export const Hero: React.FC = () => {
                         width: 100%;
                         text-align: center;
                     }
+                    .hero-eyebrow {
+                        font-size: 0.8rem;
+                        margin-bottom: 12px;
+                    }
+                    .hero-name {
+                        font-size: clamp(2rem, 7.5vw, 3rem);
+                    }
+                    .hero-typing {
+                        font-size: clamp(1rem, 3.5vw, 1.3rem);
+                        margin-top: 14px;
+                        min-height: 1.6em;
+                    }
                     .hero-bio {
+                        font-size: 0.9rem;
+                        line-height: 1.6;
+                        margin-top: 14px;
                         max-width: 100%;
                         margin-left: auto;
                         margin-right: auto;
                     }
                     .hero-buttons {
                         justify-content: center;
+                        margin-top: 24px;
+                        gap: 12px;
                     }
                     .hero-photo-frame {
-                        width: clamp(160px, 52vw, 220px);
-                        height: clamp(160px, 52vw, 220px);
+                        width: clamp(160px, 50vw, 220px);
+                        height: clamp(160px, 50vw, 220px);
+                    }
+                }
+
+                /* ── Mobile ≤ 480px ── */
+                @media (max-width: 480px) {
+                    .hero-inner {
+                        padding: 85px 0 40px;
+                        gap: 20px;
+                    }
+                    .hero-name {
+                        font-size: 1.85rem;
+                    }
+                    .hero-eyebrow {
+                        font-size: 0.75rem;
+                        margin-bottom: 8px;
+                    }
+                    .hero-typing {
+                        font-size: 1rem;
+                        margin-top: 10px;
+                    }
+                    .hero-bio {
+                        font-size: 0.85rem;
+                        margin-top: 10px;
+                    }
+                    .hero-buttons {
+                        margin-top: 20px;
+                        flex-direction: column;
+                        width: 100%;
+                        gap: 10px;
+                    }
+                    .hero-buttons > button {
+                        width: 100% !important;
+                        justify-content: center;
                     }
                 }
             `}</style>
