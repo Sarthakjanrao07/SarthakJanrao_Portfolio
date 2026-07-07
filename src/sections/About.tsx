@@ -443,7 +443,7 @@ const ChunkCard: React.FC<ChunkCardProps> = ({
                         {doc.tags.length > 8 && <span style={{ fontSize: '9px', color: 'rgba(255,255,255,0.3)' }}>+{doc.tags.length - 8}</span>}
                     </div>
                 )}
-                {doc.meta?.filename && (
+                {!!doc.meta?.filename && (
                     <span style={{ fontSize: '10px', color: '#34d399', marginTop: '2px', display: 'block' }}>
                         📄 {doc.meta.filename as string} · p.{doc.meta.page as number}
                     </span>
