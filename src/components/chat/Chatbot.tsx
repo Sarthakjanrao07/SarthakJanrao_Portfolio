@@ -230,7 +230,7 @@ const ProfilesCard: React.FC<{ data: ProofInfo }> = ({ data }) => (
 // ─── Main Chatbot ─────────────────────────────────────────────────────────────
 export const Chatbot: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onClose }) => {
     const [messages, setMessages] = useState<Message[]>([
-        { text: `Hi there! I'm ${personal.name}'s AI assistant. Ask me anything about his experience, projects, or background!`, sender: 'bot', timestamp: new Date() }
+        { text: `Hi there! I'm ${personal.name}'s AI assistant. Ask me anything about Sarthak!`, sender: 'bot', timestamp: new Date() }
     ]);
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);

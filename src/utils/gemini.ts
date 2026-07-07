@@ -145,10 +145,11 @@ export const generateChatResponse = async (
 
     // 3. Off-topic guard — quick keyword check
     if (isOffTopic(message)) {
-        const reply = "I can only answer questions about Sarthak Janrao's portfolio, skills, projects, experience, and education. Please ask something related!";
+        const reply = "I can only answer questions about Sarthak Janrao. Please ask something related!";
         responseCache.set(cacheKey, reply);
         return reply;
     }
+
 
     // 4. Semantic RAG retrieval (async — uses vector index)
     const context = await retrieveContext(message, 5);
@@ -202,7 +203,7 @@ export const generateChatResponse = async (
 
         const errText = await res.text();
         if (errText.includes('credits') || errText.includes('permission-denied') || res.status === 403) {
-            return '⚠️ Groq API key has no credits. Add credits at console.groq.com.';
+            return 'sorry credits Over now. come next day';
         }
         return `⚠️ Groq API issue: HTTP ${res.status}`;
 
