@@ -15,6 +15,7 @@ export const knowledgeBase: KnowledgeChunk[] = [
         id: 'personal-bio',
         tags: ['who', 'about', 'sarthak', 'bio', 'introduction', 'background', 'profile', 'name', 'contact', 'email', 'location', 'phone', 'mobile', 'number', 'cell', 'whatsapp', 'reach', 'call'],
         text: `Sarthak Janrao is a final-year B.E. student (Information Technology) passionate about building intelligent, scalable digital products at the intersection of AI, Cloud, and modern web engineering. He turns complex ideas into elegant, production-ready systems.
+He is originally from Andarsul village, taluka Yeola, district Nashik, Maharashtra.
 Email: sarthakjanrav@gmail.com | Phone: +91 93220 46379 | Location: Pune, Maharashtra
 Title: AI Engineer & Full Stack Developer`,
     },
