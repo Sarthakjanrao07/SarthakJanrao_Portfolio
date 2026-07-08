@@ -136,6 +136,7 @@ export const Contact: React.FC = () => {
                     {/* Contact tiles */}
                     {contactItems.map((item, i) => (
                         <motion.a
+                            className="section-card contact-card"
                             key={item.label}
                             href={item.href}
                             target={item.href.startsWith('http') ? '_blank' : undefined}
@@ -240,6 +241,7 @@ export const Contact: React.FC = () => {
 
                 {/* ── RIGHT: Contact Form ── */}
                 <motion.div
+                    className="section-card contact-form-card"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}

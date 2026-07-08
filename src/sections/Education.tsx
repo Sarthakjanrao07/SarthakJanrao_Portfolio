@@ -34,6 +34,7 @@ export const Education: React.FC = () => {
 
                 {educationData.map((edu, i) => (
                     <motion.div
+                        className="section-card edu-card"
                         key={edu.id}
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -75,7 +76,7 @@ export const Education: React.FC = () => {
                         </div>
 
                         {/* Card */}
-                        <div style={{
+                        <div className="edu-card-body" style={{
                             flex: 1,
                             background: 'rgba(255,255,255,0.04)',
                             backdropFilter: 'blur(12px)',

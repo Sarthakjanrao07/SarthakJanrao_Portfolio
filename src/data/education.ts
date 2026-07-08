@@ -18,7 +18,7 @@ export const educationData: Education[] = [
         location: 'Pune, Maharashtra',
         score: '8.35',
         scoreLabel: 'CGPA',
-        scorePercent: 8.35,
+        scorePercent: 8.35 * 10,
     },
     {
         id: 'edu-2',

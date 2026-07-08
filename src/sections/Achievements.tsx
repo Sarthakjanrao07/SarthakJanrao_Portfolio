@@ -121,6 +121,7 @@ const AchievementCard: React.FC<{ item: Achievement; i: number }> = ({ item, i }
 
     return (
         <motion.div
+            className="section-card achievement-card"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
@@ -242,6 +243,7 @@ export const Achievements: React.FC = () => {
                 marginRight: 'auto',
             }}>
                 <motion.div
+                    className="section-grid achievement-grid"
                     layout
                     style={{
                         display: 'grid',

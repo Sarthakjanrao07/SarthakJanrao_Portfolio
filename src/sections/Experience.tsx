@@ -11,7 +11,7 @@ export const Experience: React.FC = () => {
 
     const renderCategory = (title: string, data: ExperienceType[]) => {
         return (
-            <div style={{
+            <div className="section-box exp-section-box" style={{
                 background: 'transparent',
                 border: '1px solid rgba(212,166,79,0.3)',
                 borderRadius: '16px',
@@ -41,6 +41,7 @@ export const Experience: React.FC = () => {
 
                         return (
                             <motion.div
+                                className="section-card exp-card"
                                 key={exp.id}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
