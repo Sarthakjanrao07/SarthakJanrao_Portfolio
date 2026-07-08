@@ -334,7 +334,7 @@ export const Chatbot: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ is
                     exit={{ opacity: 0, scale: 0.5, y: 20 }}
                     transition={{ type: 'spring', stiffness: 400, damping: 28, mass: 0.8 }}
                     style={{ transformOrigin: 'bottom right' }}
-                    className="fixed top-[74px] sm:top-24 lg:top-28 bottom-[92px] sm:bottom-[96px] lg:bottom-28 right-4 sm:right-8 lg:right-10 z-[120] w-[calc(100%-32px)] sm:w-[360px] flex flex-col bg-[#0b141a] rounded-3xl shadow-2xl overflow-hidden font-sans antialiased border border-[#2a3942]"
+                    className="fixed top-[124px] sm:top-[128px] lg:top-[142px] bottom-[92px] sm:bottom-[96px] lg:bottom-28 right-4 sm:right-8 lg:right-10 z-[120] w-[calc(100%-32px)] sm:w-[360px] flex flex-col bg-[#0b141a] rounded-3xl shadow-2xl overflow-hidden font-sans antialiased border border-[#2a3942]"
                 >
                     {/* Header */}
                     <div style={{
@@ -457,9 +457,9 @@ export const Chatbot: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ is
                                     {/* Top Row (3) */}
                                     <div style={{ display: 'flex', justifyContent: 'center', gap: '8px' }}>
                                         {[
-                                            { label: '💻 Technical Skills', query: 'What are your technical skills?' },
-                                            { label: '🚀 Top Projects', query: 'Tell me about your top projects.' },
-                                            { label: '💼 Work Experience', query: 'What is your work experience?' }
+                                            { label: 'Technical Skills', query: 'What are your technical skills?' },
+                                            { label: 'Top Projects', query: 'Tell me about your top projects.' },
+                                            { label: 'Work Experience', query: 'What is your work experience?' }
                                         ].map((chip) => (
                                             <button
                                                 key={chip.label}
@@ -481,8 +481,8 @@ export const Chatbot: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ is
                                     {/* Bottom Row (2) */}
                                     <div style={{ display: 'flex', justifyContent: 'center', gap: '8px' }}>
                                         {[
-                                            { label: '📞 Contact Details', query: 'What are your contact details?' },
-                                            { label: '🔗 Proof of Work', query: 'Show your proof of work' }
+                                            { label: 'Contact Details', query: 'What are your contact details?' },
+                                            { label: 'Proof of Work', query: 'Show your proof of work' }
                                         ].map((chip) => (
                                             <button
                                                 key={chip.label}

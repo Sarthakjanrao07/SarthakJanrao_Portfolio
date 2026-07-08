@@ -148,7 +148,7 @@ export const Hero: React.FC = () => {
                     color: rgba(255,255,255,0.5);
                     font-size: 0.92rem;
                     line-height: 1.65;
-                    margin-top: 20px;
+                    margin-top: 30px;
                     max-width: 480px;
                 }
                 .hero-buttons {
