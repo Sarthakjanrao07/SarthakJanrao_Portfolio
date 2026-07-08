@@ -210,7 +210,6 @@ export const Hero: React.FC = () => {
                     }
                     .hero-name {
                         font-size: clamp(2rem, 7.5vw, 3rem);
-                        font-weight: 800;
                     }
                     .hero-typing {
                         font-size: clamp(1rem, 3.5vw, 1.3rem);
@@ -244,8 +243,6 @@ export const Hero: React.FC = () => {
                     }
                     .hero-name {
                         font-size: 1.85rem;
-                        font-weight: 700;
-                        letter-spacing: -0.02em;
                     }
                     .hero-eyebrow {
                         font-size: 0.75rem;
@@ -254,7 +251,6 @@ export const Hero: React.FC = () => {
                     .hero-typing {
                         font-size: 1rem;
                         margin-top: 10px;
-                        font-weight: 500;
                     }
                     .hero-bio {
                         font-size: 0.85rem;
