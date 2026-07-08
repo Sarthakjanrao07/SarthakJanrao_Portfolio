@@ -34,7 +34,7 @@ const PersonalCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
             }}
         >
             {/* Thumbnail — always visible */}
-            <div style={{ position: 'relative', flexShrink: 0, height: '200px', width: '100%', overflow: 'hidden' }}>
+            <div style={{ position: 'relative', flexShrink: 0, height: 'clamp(140px, 40vw, 200px)', width: '100%', overflow: 'hidden' }}>
                 {proj.thumbnail && (proj.thumbnail.endsWith('.png') || proj.thumbnail.endsWith('.jpg') || proj.thumbnail.endsWith('.jpeg') || proj.thumbnail.endsWith('.webp') || proj.thumbnail.startsWith('/')) ? (
                     <img
                         src={proj.thumbnail.startsWith('public/') ? proj.thumbnail.replace('public/', '/') : proj.thumbnail}
@@ -58,8 +58,8 @@ const PersonalCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
             </div>
 
             {/* Title + More button — always visible */}
-            <div style={{ padding: '16px 18px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
-                <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#fff', margin: 0, lineHeight: 1.3 }}>
+            <div style={{ padding: 'clamp(12px, 3vw, 16px) clamp(14px, 3vw, 18px) 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
+                <h3 style={{ fontSize: 'clamp(0.95rem, 3.5vw, 1.1rem)', fontWeight: 700, color: '#fff', margin: 0, lineHeight: 1.3 }}>
                     {proj.title}
                 </h3>
                 <button
@@ -101,13 +101,13 @@ const PersonalCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
                         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                         style={{ overflow: 'hidden' }}
                     >
-                        <div style={{ padding: '14px 18px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                        <div style={{ padding: 'clamp(10px, 2.5vw, 14px) clamp(14px, 3vw, 18px)', display: 'flex', flexDirection: 'column', gap: '12px' }}>
                             <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem', lineHeight: 1.65, margin: 0 }}>
                                 {proj.description}
                             </p>
 
                             <div>
-                                <div style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
+                                <div style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
                                     Tools &amp; Technologies
                                 </div>
                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
@@ -126,7 +126,7 @@ const PersonalCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
 
                             {proj.features && (
                                 <div>
-                                    <div style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
+                                    <div style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
                                         Features
                                     </div>
                                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '7px' }}>
@@ -146,7 +146,7 @@ const PersonalCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
 
             {/* Github + Live — always visible at bottom */}
             <div style={{
-                padding: '14px 18px 18px',
+                padding: 'clamp(10px, 2.5vw, 14px) clamp(14px, 3vw, 18px) clamp(14px, 3.5vw, 18px)',
                 display: 'flex',
                 flexDirection: 'row',
                 gap: '12px',
@@ -156,10 +156,10 @@ const PersonalCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
                     <a href={proj.github} target="_blank" rel="noopener noreferrer" style={{
                         flex: 1,
                         display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
-                        padding: '11px', borderRadius: '8px',
+                        padding: 'clamp(8px, 2vw, 11px)', borderRadius: '8px',
                         border: '1.5px solid rgba(212,166,79,0.45)',
                         background: 'transparent', color: 'var(--gold)',
-                        fontSize: '0.85rem', fontWeight: 700,
+                        fontSize: 'clamp(0.75rem, 2vw, 0.85rem)', fontWeight: 700,
                         textDecoration: 'none', letterSpacing: '0.03em',
                         transition: 'background 0.2s, border-color 0.2s',
                     }}
@@ -173,10 +173,10 @@ const PersonalCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
                     <a href={proj.live} target="_blank" rel="noopener noreferrer" style={{
                         flex: 1,
                         display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
-                        padding: '11px', borderRadius: '8px',
+                        padding: 'clamp(8px, 2vw, 11px)', borderRadius: '8px',
                         border: '1.5px solid rgba(255,255,255,0.12)',
                         background: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.75)',
-                        fontSize: '0.85rem', fontWeight: 700,
+                        fontSize: 'clamp(0.75rem, 2vw, 0.85rem)', fontWeight: 700,
                         textDecoration: 'none', letterSpacing: '0.03em',
                         transition: 'all 0.2s',
                     }}
@@ -208,7 +208,7 @@ const OrgCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
                 backdropFilter: 'blur(12px)',
                 borderRadius: '14px',
                 border: '1px solid rgba(255,255,255,0.07)',
-                padding: '20px',
+                padding: 'clamp(14px, 3vw, 20px)',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '14px',
@@ -250,7 +250,7 @@ const OrgCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
 
             {/* Title + More/Less */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '12px' }}>
-                <h3 style={{ fontSize: '1rem', fontWeight: 800, color: '#fff', margin: 0, lineHeight: 1.3 }}>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#fff', margin: 0, lineHeight: 1.3 }}>
                     {proj.title}
                 </h3>
                 <button
@@ -321,7 +321,7 @@ const OrgCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
                         <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '16px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
                             {proj.about && (
                                 <div>
-                                    <div style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '7px' }}>
+                                    <div style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '7px' }}>
                                         About the Project
                                     </div>
                                     <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.82rem', lineHeight: 1.65, margin: 0 }}>
@@ -332,7 +332,7 @@ const OrgCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
 
                             {proj.contribution && proj.contribution.length > 0 && (
                                 <div>
-                                    <div style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '7px' }}>
+                                    <div style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '7px' }}>
                                         My Contribution
                                     </div>
                                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '7px' }}>
@@ -347,7 +347,7 @@ const OrgCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
                             )}
 
                             <div>
-                                <div style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '7px' }}>
+                                <div style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '7px' }}>
                                     Tech Stack
                                 </div>
                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
@@ -371,7 +371,7 @@ const OrgCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
                                     borderRadius: '10px',
                                     padding: '12px 16px',
                                 }}>
-                                    <div style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '6px' }}>
+                                    <div style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '6px' }}>
                                         Impact
                                     </div>
                                     <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.8rem', lineHeight: 1.6, margin: 0 }}>
@@ -423,16 +423,16 @@ export const Portfolio: React.FC = () => {
                 <div style={{
                     border: '1px solid rgba(212,166,79,0.25)',
                     borderRadius: '16px',
-                    padding: '32px 24px',
+                    padding: 'clamp(16px, 4vw, 32px) clamp(12px, 3vw, 24px)',
                     background: 'rgba(255,255,255,0.01)',
                 }}>
-                    <h3 style={{ textAlign: 'center', fontSize: '1.3rem', fontWeight: 800, color: '#fff', marginBottom: '28px', letterSpacing: '0.02em' }}>
+                    <h3 style={{ textAlign: 'center', fontSize: '1.3rem', fontWeight: 700, color: '#fff', marginBottom: '28px', letterSpacing: '0.02em' }}>
                         My Personal Projects
                     </h3>
                     <div style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fill, minmax(290px, 1fr))',
-                        gap: '20px',
+                        gridTemplateColumns: 'repeat(auto-fill, minmax(clamp(250px, 80vw, 290px), 1fr))',
+                        gap: 'clamp(12px, 3vw, 20px)',
                         alignItems: 'start',
                     }}>
                         {personal.map((proj, i) => <PersonalCard key={proj.id} proj={proj} i={i} />)}
@@ -443,10 +443,10 @@ export const Portfolio: React.FC = () => {
                 <div style={{
                     border: '1px solid rgba(212,166,79,0.25)',
                     borderRadius: '16px',
-                    padding: '32px 24px',
+                    padding: 'clamp(16px, 4vw, 32px) clamp(12px, 3vw, 24px)',
                     background: 'rgba(255,255,255,0.01)',
                 }}>
-                    <h3 style={{ textAlign: 'center', fontSize: '1.3rem', fontWeight: 800, color: '#fff', marginBottom: '8px', letterSpacing: '0.02em' }}>
+                    <h3 style={{ textAlign: 'center', fontSize: '1.3rem', fontWeight: 700, color: '#fff', marginBottom: '8px', letterSpacing: '0.02em' }}>
                         Organizational Projects
                     </h3>
                     <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem', marginBottom: '24px' }}>
@@ -454,8 +454,8 @@ export const Portfolio: React.FC = () => {
                     </p>
                     <div style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(min(450px, 100%), 1fr))',
-                        gap: '20px',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))',
+                        gap: 'clamp(12px, 3vw, 20px)',
                         alignItems: 'start',
                     }}>
                         {org.map((proj, i) => <OrgCard key={proj.id} proj={proj} i={i} />)}

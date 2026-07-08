@@ -81,7 +81,7 @@ export const Education: React.FC = () => {
                             backdropFilter: 'blur(12px)',
                             borderRadius: '16px',
                             border: '1px solid rgba(212,166,79,0.2)',
-                            padding: '24px 28px',
+                            padding: 'clamp(18px, 4vw, 24px) clamp(16px, 4vw, 28px)',
                             boxShadow: '0 8px 32px rgba(0,0,0,0.25)',
                             position: 'relative',
                             overflow: 'hidden',
@@ -131,7 +131,7 @@ export const Education: React.FC = () => {
                                     <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.7rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                                         {edu.scoreLabel}
                                     </span>
-                                    <span style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 800 }}>
+                                    <span style={{ color: 'var(--gold)', fontSize: '0.9rem', fontWeight: 700 }}>
                                         {edu.score}
                                     </span>
                                 </div>
@@ -140,7 +140,7 @@ export const Education: React.FC = () => {
                             {/* Degree */}
                             <h3 style={{
                                 fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
-                                fontWeight: 800,
+                                fontWeight: 700,
                                 color: '#fff',
                                 margin: '0 0 8px',
                                 lineHeight: 1.3,

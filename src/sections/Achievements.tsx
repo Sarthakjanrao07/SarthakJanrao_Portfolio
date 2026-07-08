@@ -43,7 +43,7 @@ const AchievementCard: React.FC<{ item: Achievement; i: number }> = ({ item, i }
                 {/* Upper Right Pill */}
                 <div style={{
                     fontSize: '0.62rem',
-                    fontWeight: 800,
+                    fontWeight: 700,
                     textTransform: 'uppercase',
                     color: 'var(--gold)',
                     border: '1px solid rgba(212,166,79,0.4)',
@@ -59,7 +59,7 @@ const AchievementCard: React.FC<{ item: Achievement; i: number }> = ({ item, i }
             {/* Title */}
             <h3 style={{
                 fontSize: '1.05rem',
-                fontWeight: 800,
+                fontWeight: 700,
                 color: '#fff',
                 margin: '18px 0 10px 0',
                 lineHeight: 1.4,
@@ -130,7 +130,7 @@ const AchievementCard: React.FC<{ item: Achievement; i: number }> = ({ item, i }
                 backdropFilter: 'blur(12px)',
                 borderRadius: '20px',
                 border: '1px solid rgba(212,166,79,0.18)',
-                padding: '24px',
+                padding: 'clamp(16px, 3.5vw, 24px)',
                 display: 'flex',
                 flexDirection: 'column',
                 position: 'relative',
@@ -169,7 +169,7 @@ export const Achievements: React.FC = () => {
             <div style={{ textAlign: 'center', marginBottom: '40px' }}>
                 <h2 style={{
                     fontSize: '2.4rem',
-                    fontWeight: 800,
+                    fontWeight: 700,
                     color: 'var(--gold)',
                     margin: '0 0 12px 0',
                     letterSpacing: '0.02em',
@@ -210,7 +210,7 @@ export const Achievements: React.FC = () => {
                                 padding: '10px 24px',
                                 color: isActive ? '#000000' : 'rgba(255,255,255,0.6)',
                                 fontSize: '0.85rem',
-                                fontWeight: 800,
+                                fontWeight: 700,
                                 cursor: 'pointer',
                                 transition: 'all 0.3s cubic-bezier(0.22, 1, 0.36, 1)',
                             }}
@@ -246,7 +246,7 @@ export const Achievements: React.FC = () => {
                     style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))',
-                        gap: '20px',
+                        gap: 'clamp(12px, 3vw, 20px)',
                         alignItems: 'stretch',
                     }}
                 >

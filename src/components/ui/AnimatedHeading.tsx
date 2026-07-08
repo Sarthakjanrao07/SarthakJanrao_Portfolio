@@ -24,7 +24,7 @@ export const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
         <p className="text-[var(--gold)] text-xs font-semibold tracking-[0.2em] uppercase mb-2 opacity-80">
             {sub}
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold text-[var(--text)] leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold md:font-bold text-[var(--text)] leading-tight">
             {title}
         </h2>
         <motion.div
