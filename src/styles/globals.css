@@ -178,17 +178,12 @@ body {
 
     /* Education timeline and Card overrides */
     .edu-card {
-        gap: 12px !important;
+        gap: 0 !important;
     }
 
-    .edu-card>div:first-child>div {
-        width: 40px !important;
-        height: 40px !important;
-        font-size: 0.9rem !important;
-    }
-
-    #education .edu-timeline-line {
-        left: 20px !important;
+    .edu-timeline-line,
+    .edu-timeline-badge {
+        display: none !important;
     }
 
     .edu-card-body {

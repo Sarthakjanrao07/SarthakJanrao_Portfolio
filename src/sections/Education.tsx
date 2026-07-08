@@ -22,7 +22,7 @@ export const Education: React.FC = () => {
                 position: 'relative',
             }}>
                 {/* Vertical timeline line */}
-                <div style={{
+                <div className="edu-timeline-line" style={{
                     position: 'absolute',
                     left: '28px',
                     top: '36px',
@@ -50,7 +50,7 @@ export const Education: React.FC = () => {
                         }}
                     >
                         {/* Timeline dot */}
-                        <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div className="edu-timeline-badge" style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <motion.div
                                 initial={{ scale: 0 }}
                                 whileInView={{ scale: 1 }}
