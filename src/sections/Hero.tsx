@@ -146,8 +146,8 @@ export const Hero: React.FC = () => {
                 }
                 .hero-bio {
                     color: rgba(255,255,255,0.5);
-                    font-size: 1rem;
-                    line-height: 1.7;
+                    font-size: 0.92rem;
+                    line-height: 1.65;
                     margin-top: 20px;
                     max-width: 480px;
                 }
@@ -217,7 +217,7 @@ export const Hero: React.FC = () => {
                         min-height: 1.6em;
                     }
                     .hero-bio {
-                        font-size: 0.9rem;
+                        font-size: 0.84rem;
                         line-height: 1.6;
                         margin-top: 14px;
                         max-width: 100%;
@@ -253,7 +253,7 @@ export const Hero: React.FC = () => {
                         margin-top: 10px;
                     }
                     .hero-bio {
-                        font-size: 0.85rem;
+                        font-size: 0.8rem;
                         margin-top: 10px;
                     }
                     .hero-buttons {

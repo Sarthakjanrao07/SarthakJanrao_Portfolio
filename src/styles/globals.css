@@ -270,4 +270,12 @@ body {
         font-size: 0.72rem !important;
         margin-bottom: 16px !important;
     }
+
+    /* About section text override */
+    .about-bio-text {
+        text-align: justify !important;
+        font-size: 0.95rem !important;
+        line-height: 1.7 !important;
+        padding: 0 6px !important;
+    }
 }

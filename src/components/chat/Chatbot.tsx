@@ -334,7 +334,7 @@ export const Chatbot: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ is
                     exit={{ opacity: 0, scale: 0.5, y: 20 }}
                     transition={{ type: 'spring', stiffness: 400, damping: 28, mass: 0.8 }}
                     style={{ transformOrigin: 'bottom right' }}
-                    className="fixed bottom-[88px] sm:bottom-24 lg:bottom-28 right-4 sm:right-8 lg:right-10 z-[120] w-[calc(100%-32px)] sm:w-[360px] h-[60vh] sm:h-[520px] max-h-[640px] flex flex-col bg-[#0b141a] rounded-3xl shadow-2xl overflow-hidden font-sans antialiased border border-[#2a3942]"
+                    className="fixed top-[74px] sm:top-24 lg:top-28 bottom-[92px] sm:bottom-[96px] lg:bottom-28 right-4 sm:right-8 lg:right-10 z-[120] w-[calc(100%-32px)] sm:w-[360px] flex flex-col bg-[#0b141a] rounded-3xl shadow-2xl overflow-hidden font-sans antialiased border border-[#2a3942]"
                 >
                     {/* Header */}
                     <div style={{
