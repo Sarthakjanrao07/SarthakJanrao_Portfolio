@@ -14,6 +14,7 @@ const PersonalCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
 
     return (
         <motion.div
+            className="portfolio-card personal-card"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
@@ -34,7 +35,7 @@ const PersonalCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
             }}
         >
             {/* Thumbnail — always visible */}
-            <div style={{ position: 'relative', flexShrink: 0, height: '200px', width: '100%', overflow: 'hidden' }}>
+            <div className="portfolio-card-thumb" style={{ position: 'relative', flexShrink: 0, height: '200px', width: '100%', overflow: 'hidden' }}>
                 {proj.thumbnail && (proj.thumbnail.endsWith('.png') || proj.thumbnail.endsWith('.jpg') || proj.thumbnail.endsWith('.jpeg') || proj.thumbnail.endsWith('.webp') || proj.thumbnail.startsWith('/')) ? (
                     <img
                         src={proj.thumbnail.startsWith('public/') ? proj.thumbnail.replace('public/', '/') : proj.thumbnail}
@@ -58,7 +59,7 @@ const PersonalCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
             </div>
 
             {/* Title + More button — always visible */}
-            <div style={{ padding: '16px 18px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
+            <div className="portfolio-card-header" style={{ padding: '16px 18px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
                 <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#fff', margin: 0, lineHeight: 1.3 }}>
                     {proj.title}
                 </h3>
@@ -145,7 +146,7 @@ const PersonalCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
             </AnimatePresence>
 
             {/* Github + Live — always visible at bottom */}
-            <div style={{
+            <div className="portfolio-card-footer" style={{
                 padding: '14px 18px 18px',
                 display: 'flex',
                 flexDirection: 'row',
@@ -199,6 +200,7 @@ const OrgCard: React.FC<{ proj: Project; i: number }> = ({ proj, i }) => {
 
     return (
         <motion.div
+            className="portfolio-card org-card"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
@@ -420,7 +422,7 @@ export const Portfolio: React.FC = () => {
                 gap: '32px',
             }}>
                 {/* Personal Projects */}
-                <div style={{
+                <div className="portfolio-section-box" style={{
                     border: '1px solid rgba(212,166,79,0.25)',
                     borderRadius: '16px',
                     padding: '32px 24px',
@@ -429,7 +431,7 @@ export const Portfolio: React.FC = () => {
                     <h3 style={{ textAlign: 'center', fontSize: '1.3rem', fontWeight: 800, color: '#fff', marginBottom: '28px', letterSpacing: '0.02em' }}>
                         My Personal Projects
                     </h3>
-                    <div style={{
+                    <div className="portfolio-grid personal-grid" style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(auto-fill, minmax(290px, 1fr))',
                         gap: '20px',
@@ -440,7 +442,7 @@ export const Portfolio: React.FC = () => {
                 </div>
 
                 {/* Organizational Projects */}
-                <div style={{
+                <div className="portfolio-section-box" style={{
                     border: '1px solid rgba(212,166,79,0.25)',
                     borderRadius: '16px',
                     padding: '32px 24px',
@@ -452,7 +454,7 @@ export const Portfolio: React.FC = () => {
                     <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem', marginBottom: '24px' }}>
                         Projects built during organizational engagements — shared for reference only, no source code or live links.
                     </p>
-                    <div style={{
+                    <div className="portfolio-grid org-grid" style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(auto-fit, minmax(min(450px, 100%), 1fr))',
                         gap: '20px',

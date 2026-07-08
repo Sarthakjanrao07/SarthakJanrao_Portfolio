@@ -81,3 +81,76 @@ body {
 .glow-mesh {
     background-image: radial-gradient(circle at 50% 50%, var(--gold-glow) 0%, transparent 70%);
 }
+
+/* ── Portfolio Mobile Responsive ── */
+@media (max-width: 640px) {
+
+    /* Section wrapper boxes — reduce padding */
+    .portfolio-section-box {
+        padding: 18px 12px !important;
+        border-radius: 12px !important;
+    }
+
+    /* Grid — single column, tighter gap */
+    .portfolio-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    /* Card overall — smaller border radius */
+    .portfolio-card {
+        border-radius: 12px !important;
+    }
+
+    /* Thumbnail — shorter on mobile */
+    .portfolio-card-thumb {
+        height: 140px !important;
+    }
+
+    /* Card header — reduce padding */
+    .portfolio-card-header {
+        padding: 12px 14px 0 !important;
+    }
+
+    .portfolio-card-header h3 {
+        font-size: 0.95rem !important;
+    }
+
+    /* Card footer — reduce padding */
+    .portfolio-card-footer {
+        padding: 10px 14px 14px !important;
+        gap: 8px !important;
+    }
+
+    .portfolio-card-footer a {
+        padding: 9px !important;
+        font-size: 0.78rem !important;
+        border-radius: 6px !important;
+    }
+
+    /* Org card — reduce inner padding */
+    .org-card {
+        padding: 14px !important;
+        gap: 10px !important;
+        border-radius: 12px !important;
+    }
+
+    .org-card h3 {
+        font-size: 0.92rem !important;
+    }
+
+    .org-card p {
+        font-size: 0.78rem !important;
+    }
+
+    /* Section headings */
+    .portfolio-section-box>h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 18px !important;
+    }
+
+    .portfolio-section-box>p {
+        font-size: 0.72rem !important;
+        margin-bottom: 16px !important;
+    }
+}
