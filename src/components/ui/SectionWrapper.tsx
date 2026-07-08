@@ -12,7 +12,7 @@ export const SectionWrapper: React.FC<SectionWrapperProps> = ({ id, children, cl
             id={id}
             className={className}
             style={{
-                padding: 'clamp(60px, 10vw, 100px) clamp(16px, 4vw, 24px)',
+                padding: '100px 24px',
                 position: 'relative',
                 overflow: 'hidden',
                 width: '100%',

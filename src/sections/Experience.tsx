@@ -15,14 +15,14 @@ export const Experience: React.FC = () => {
                 background: 'transparent',
                 border: '1px solid rgba(212,166,79,0.3)',
                 borderRadius: '16px',
-                padding: 'clamp(20px, 4vw, 30px) clamp(16px, 3vw, 24px)',
+                padding: '30px 24px',
                 marginBottom: '32px',
                 position: 'relative',
             }}>
                 <h3 style={{
                     textAlign: 'center',
                     fontSize: '1.4rem',
-                    fontWeight: 700,
+                    fontWeight: 800,
                     color: 'white',
                     marginBottom: '24px',
                     letterSpacing: '0.02em'
@@ -51,7 +51,7 @@ export const Experience: React.FC = () => {
                                     backdropFilter: 'blur(12px)',
                                     borderRadius: '12px',
                                     border: '1px solid rgba(255,255,255,0.05)',
-                                    padding: 'clamp(14px, 3vw, 20px)',
+                                    padding: '20px',
                                     position: 'relative',
                                     overflow: 'hidden',
                                     transition: 'background 0.3s ease, border-color 0.3s ease',

@@ -18,8 +18,8 @@ export const Button: React.FC<ButtonProps> = ({ variant = 'gold', leftIcon, righ
             style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '8px',
-                padding: 'clamp(10px, 2.5vw, 12px) clamp(16px, 4vw, 24px)',
+                gap: '10px',
+                padding: '12px 24px',
                 borderRadius: '8px',
                 fontSize: '0.9rem',
                 fontWeight: 600,

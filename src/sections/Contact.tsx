@@ -112,7 +112,7 @@ export const Contact: React.FC = () => {
                             padding: '28px',
                         }}
                     >
-                        <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#fff', margin: '0 0 10px 0' }}>
+                        <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#fff', margin: '0 0 10px 0' }}>
                             Let's Build Something Together
                         </h3>
                         <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.88rem', lineHeight: 1.7, margin: 0 }}>
@@ -252,7 +252,7 @@ export const Contact: React.FC = () => {
                         padding: '36px 32px',
                     }}
                 >
-                    <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#fff', margin: '0 0 6px 0' }}>
+                    <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#fff', margin: '0 0 6px 0' }}>
                         Send a Message
                     </h3>
                     <p style={{ color: 'rgba(255,255,255,0.38)', fontSize: '0.82rem', margin: '0 0 28px 0' }}>
@@ -332,7 +332,7 @@ export const Contact: React.FC = () => {
                                 border: 'none',
                                 color: '#000',
                                 fontSize: '0.95rem',
-                                fontWeight: 700,
+                                fontWeight: 800,
                                 cursor: 'pointer',
                                 display: 'flex',
                                 alignItems: 'center',
