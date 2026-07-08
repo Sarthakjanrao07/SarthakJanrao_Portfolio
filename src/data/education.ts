@@ -12,7 +12,7 @@ export interface Education {
 export const educationData: Education[] = [
     {
         id: 'edu-1',
-        period: 'August 2022 – June 2026',
+        period: '2022 – 2026',
         degree: "Bachelor's in Engineering (Information Technology)",
         institution: 'International Institute of Information Technology',
         location: 'Pune, Maharashtra',

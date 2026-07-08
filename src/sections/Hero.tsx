@@ -7,7 +7,7 @@ import { personal } from '../data/personal';
 import profilePhoto from '../assets/profile.jpg';
 
 export const Hero: React.FC = () => {
-    const typed = useTypingEffect(['AI Engineer', 'Full Stack Developer', 'Cloud Engineer'], 100);
+    const typed = useTypingEffect(['AI Engineer', 'Full Stack Developer', 'Web Developer', 'n8n automation engineer'], 100);
 
     return (
         <section
