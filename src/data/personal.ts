@@ -4,10 +4,11 @@ export const personal = {
     initials: 'SJ',
     title: 'AI Engineer & Full Stack Developer',
     taglines: [
-        'Cloud Engineer',
+        'Web Developer',
         'AI Engineer',
         'Full Stack Developer',
-        'Problem Solver',
+        'n8n automation Engineer',
+        'Problem Solver'
     ],
     bio: `Final-year B.E. student passionate about building intelligent, scalable digital products at the intersection of AI, Cloud, and modern web engineering. I thrive at turning complex ideas into elegant, production-ready systems.`,
     email: 'sarthakjanrav@gmail.com',
